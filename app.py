@@ -42,7 +42,7 @@ for msg in st.session_state.messages:
 
 # takes new input in chat box from user and invokes the graph
 if prompt := st.chat_input():
-    st.session_state.messages.append(HumanMessage(content=prompt))
+    st.session_state.messages.append(HumanMessage(content=prompt+" 必ず、日本語で答えて下さい。"))
     st.chat_message("user").write(prompt)
 
     # Process the AI's response and handles graph events using the callback mechanism
