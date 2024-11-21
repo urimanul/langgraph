@@ -14,7 +14,7 @@ graph = StateGraph(GraphsState)
 
 # Core invocation of the model
 def _call_model(state: GraphsState):
-    messages = state["messages"]
+    messages = state["messages"+" 必ず、日本語で答えて下さい。"]
     #llm = ChatOpenAI(
         #temperature=0.0,
         #streaming=True,
