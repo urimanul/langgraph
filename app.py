@@ -14,8 +14,6 @@ st.markdown("#### チャット・ストリーミング")
 
 # st write magic
 """
-langgraphを利用してLLMします。
---- 
 """
 
 # Check if the API key is available as an environment variable
