@@ -17,15 +17,15 @@ st.markdown("#### チャット・ストリーミング")
 """
 
 # Check if the API key is available as an environment variable
-if not os.getenv('OPENAI_API_KEY'):
+#if not os.getenv('OPENAI_API_KEY'):
     # If not, display a sidebar input for the user to provide the API key
-    st.sidebar.header("OPENAI_API_KEY Setup")
-    api_key = st.sidebar.text_input(label="API Key", type="password", label_visibility="collapsed")
-    os.environ["OPENAI_API_KEY"] = api_key
+    #st.sidebar.header("OPENAI_API_KEY Setup")
+    #api_key = st.sidebar.text_input(label="API Key", type="password", label_visibility="collapsed")
+    #os.environ["OPENAI_API_KEY"] = api_key
     # If no key is provided, show an info message and stop further execution and wait till key is entered
-    if not api_key:
-        st.info("Please enter your OPENAI_API_KEY in the sidebar.")
-        st.stop()
+    #if not api_key:
+        #st.info("Please enter your OPENAI_API_KEY in the sidebar.")
+        #st.stop()
 
 if "messages" not in st.session_state:
     # default initial message to render in message state
