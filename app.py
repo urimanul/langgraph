@@ -29,7 +29,7 @@ if not os.getenv('OPENAI_API_KEY'):
 
 if "messages" not in st.session_state:
     # default initial message to render in message state
-    st.session_state["messages"] = [AIMessage(content="How can I help you?")]
+    st.session_state["messages"] = [AIMessage(content="私はlanggraph botです。ご質問をどうぞ。")]
 
 # Loop through all messages in the session state and render them as a chat on every st.refresh mech
 for msg in st.session_state.messages:
