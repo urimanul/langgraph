@@ -1,4 +1,5 @@
 langgraph
 streamlit
 langchain-openai
+groq
 python-dotenv
