@@ -9,7 +9,7 @@ from st_callable_util import get_streamlit_cb  # Utility function to get a Strea
 
 load_dotenv()
 
-st.title("RYH 🤝 LangGraph")
+st.title("RYH ⛓ LangGraph")
 st.markdown("#### チャット・ストリーミング")
 
 # st write magic
