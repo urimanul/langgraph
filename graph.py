@@ -2,7 +2,8 @@ from typing import Annotated, TypedDict
 
 from langgraph.graph import START, END, StateGraph
 from langgraph.graph.message import AnyMessage, add_messages
-from langchain_openai import ChatOpenAI
+#from langchain_openai import ChatOpenAI
+from groq import ChatOpenAI
 
 # This is the default state same as "MessageState" TypedDict but allows us accessibility to custom keys
 class GraphsState(TypedDict):
@@ -14,7 +15,11 @@ graph = StateGraph(GraphsState)
 # Core invocation of the model
 def _call_model(state: GraphsState):
     messages = state["messages"]
-    llm = ChatOpenAI(
+    #llm = ChatOpenAI(
+        #temperature=0.0,
+        #streaming=True,
+    #)
+    llm = groq.ChatOpenAI(
         temperature=0.0,
         streaming=True,
     )
