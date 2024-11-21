@@ -9,18 +9,12 @@ from st_callable_util import get_streamlit_cb  # Utility function to get a Strea
 
 load_dotenv()
 
-st.title("StreamLit 🤝 LangGraph")
-st.markdown("#### Simple Chat Streaming")
+st.title("RYH 🤝 LangGraph")
+st.markdown("#### チャット・ストリーミング")
 
 # st write magic
 """
-In this example, we're going to be creating our own [`BaseCallbackHandler`](https://api.python.langchain.com/en/latest/callbacks/langchain_core.callbacks.base.BaseCallbackHandler.html) called StreamHandler 
-to stream our [_LangGraph_](https://langchain-ai.github.io/langgraph/) invocations and leveraging callbacks in our 
-graph's [`RunnableConfig`](https://api.python.langchain.com/en/latest/runnables/langchain_core.runnables.config.RunnableConfig.html).
-
-The BaseCallBackHandler is a [Mixin](https://www.wikiwand.com/en/articles/Mixin) overloader function which we will use
-to implement only `on_llm_new_token`, a method that run on every new generation of a token from the ChatLLM model.
-
+これは、OpenAI の GPT-3.5 モデルを使用して応答を生成するシンプルなチャットボットです。このアプリを使用するには、ここで入手できる OpenAI API キーを提供する必要があります。チュートリアルに従って、このアプリを段階的に構築する方法を学ぶこともできます。
 --- 
 """
 
