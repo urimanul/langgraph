@@ -50,6 +50,7 @@ if prompt := st.chat_input():
         # create a new container for streaming messages only, and give it context
         st_callback = get_streamlit_cb(st.container())
         response = invoke_our_graph(st.session_state.messages, [st_callback])
+        st.write(response)
         # Add that last message to the st_message_state
         # Streamlit's refresh the message will automatically be visually rendered bc of the msg render for loop above
         st.session_state.messages.append(AIMessage(content=response["messages"][-1].content))
